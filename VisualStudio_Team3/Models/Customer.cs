@@ -5,13 +5,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.Collections.Generic;
 
 namespace VisualStudio_Team3.Models
 {
     public class Customer
-    {
-        
-        public int CustomerID { get; private set; }
+    {        
+        public Customer(){}
+
+        public int CustomerID { get; set; }
         [Required]
         [MaxLength(20, ErrorMessage = "20 Characters or less")]
         public string FirstName { get; set; }
