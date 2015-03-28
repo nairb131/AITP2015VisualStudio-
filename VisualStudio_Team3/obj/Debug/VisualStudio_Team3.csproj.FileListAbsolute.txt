@@ -1,2 +1,9 @@
 C:\Users\Brian\Desktop\VisualStudio_Team3\VisualStudio_Team3\bin\Debug\VisualStudio_Team3.exe.config
 C:\Github\AITP2015VisualStudio-\VisualStudio_Team3\bin\Debug\VisualStudio_Team3.exe.config
+D:\Documents\GitHub\AITP2015VisualStudio-\VisualStudio_Team3\bin\Debug\VisualStudio_Team3.exe.config
+D:\Documents\GitHub\AITP2015VisualStudio-\VisualStudio_Team3\obj\Debug\VisualStudio_Team3.csprojResolveAssemblyReference.cache
+D:\Documents\GitHub\AITP2015VisualStudio-\VisualStudio_Team3\obj\Debug\VisualStudio_Team3.Login.resources
+D:\Documents\GitHub\AITP2015VisualStudio-\VisualStudio_Team3\obj\Debug\VisualStudio_Team3.main.resources
+D:\Documents\GitHub\AITP2015VisualStudio-\VisualStudio_Team3\obj\Debug\VisualStudio_Team3.Properties.Resources.resources
+D:\Documents\GitHub\AITP2015VisualStudio-\VisualStudio_Team3\obj\Debug\VisualStudio_Team3.Register.resources
+D:\Documents\GitHub\AITP2015VisualStudio-\VisualStudio_Team3\obj\Debug\VisualStudio_Team3.csproj.GenerateResource.Cache
