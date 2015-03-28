@@ -260,7 +260,7 @@
   <xs:element name="NCAAWSDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="NCAAWSDataSet" msprop:Generator_UserDSName="NCAAWSDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Customer" msprop:Generator_TableClassName="CustomerDataTable" msprop:Generator_TableVarName="tableCustomer" msprop:Generator_RowChangedName="CustomerRowChanged" msprop:Generator_TablePropName="Customer" msprop:Generator_RowDeletingName="CustomerRowDeleting" msprop:Generator_RowChangingName="CustomerRowChanging" msprop:Generator_RowEvHandlerName="CustomerRowChangeEventHandler" msprop:Generator_RowDeletedName="CustomerRowDeleted" msprop:Generator_RowClassName="CustomerRow" msprop:Generator_UserTableName="Customer" msprop:Generator_RowEvArgName="CustomerRowChangeEvent">
+        <xs:element name="Customer" msprop:Generator_TableClassName="CustomerDataTable" msprop:Generator_TableVarName="tableCustomer" msprop:Generator_TablePropName="Customer" msprop:Generator_RowDeletingName="CustomerRowDeleting" msprop:Generator_RowChangingName="CustomerRowChanging" msprop:Generator_RowEvHandlerName="CustomerRowChangeEventHandler" msprop:Generator_RowDeletedName="CustomerRowDeleted" msprop:Generator_UserTableName="Customer" msprop:Generator_RowChangedName="CustomerRowChanged" msprop:Generator_RowEvArgName="CustomerRowChangeEvent" msprop:Generator_RowClassName="CustomerRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="CustomerID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnCustomerID" msprop:Generator_ColumnPropNameInRow="CustomerID" msprop:Generator_ColumnPropNameInTable="CustomerIDColumn" msprop:Generator_UserColumnName="CustomerID" type="xs:int" />
@@ -346,7 +346,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Seats" msprop:Generator_TableClassName="SeatsDataTable" msprop:Generator_TableVarName="tableSeats" msprop:Generator_RowChangedName="SeatsRowChanged" msprop:Generator_TablePropName="Seats" msprop:Generator_RowDeletingName="SeatsRowDeleting" msprop:Generator_RowChangingName="SeatsRowChanging" msprop:Generator_RowEvHandlerName="SeatsRowChangeEventHandler" msprop:Generator_RowDeletedName="SeatsRowDeleted" msprop:Generator_RowClassName="SeatsRow" msprop:Generator_UserTableName="Seats" msprop:Generator_RowEvArgName="SeatsRowChangeEvent">
+        <xs:element name="Seats" msprop:Generator_TableClassName="SeatsDataTable" msprop:Generator_TableVarName="tableSeats" msprop:Generator_TablePropName="Seats" msprop:Generator_RowDeletingName="SeatsRowDeleting" msprop:Generator_RowChangingName="SeatsRowChanging" msprop:Generator_RowEvHandlerName="SeatsRowChangeEventHandler" msprop:Generator_RowDeletedName="SeatsRowDeleted" msprop:Generator_UserTableName="Seats" msprop:Generator_RowChangedName="SeatsRowChanged" msprop:Generator_RowEvArgName="SeatsRowChangeEvent" msprop:Generator_RowClassName="SeatsRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="SeatNumber" msprop:Generator_ColumnVarNameInTable="columnSeatNumber" msprop:Generator_ColumnPropNameInRow="SeatNumber" msprop:Generator_ColumnPropNameInTable="SeatNumberColumn" msprop:Generator_UserColumnName="SeatNumber" type="xs:int" minOccurs="0" />
@@ -376,7 +376,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Tickets" msprop:Generator_TableClassName="TicketsDataTable" msprop:Generator_TableVarName="tableTickets" msprop:Generator_RowChangedName="TicketsRowChanged" msprop:Generator_TablePropName="Tickets" msprop:Generator_RowDeletingName="TicketsRowDeleting" msprop:Generator_RowChangingName="TicketsRowChanging" msprop:Generator_RowEvHandlerName="TicketsRowChangeEventHandler" msprop:Generator_RowDeletedName="TicketsRowDeleted" msprop:Generator_RowClassName="TicketsRow" msprop:Generator_UserTableName="Tickets" msprop:Generator_RowEvArgName="TicketsRowChangeEvent">
+        <xs:element name="Tickets" msprop:Generator_TableClassName="TicketsDataTable" msprop:Generator_TableVarName="tableTickets" msprop:Generator_TablePropName="Tickets" msprop:Generator_RowDeletingName="TicketsRowDeleting" msprop:Generator_RowChangingName="TicketsRowChanging" msprop:Generator_RowEvHandlerName="TicketsRowChangeEventHandler" msprop:Generator_RowDeletedName="TicketsRowDeleted" msprop:Generator_UserTableName="Tickets" msprop:Generator_RowChangedName="TicketsRowChanged" msprop:Generator_RowEvArgName="TicketsRowChangeEvent" msprop:Generator_RowClassName="TicketsRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="TicketsID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnTicketsID" msprop:Generator_ColumnPropNameInRow="TicketsID" msprop:Generator_ColumnPropNameInTable="TicketsIDColumn" msprop:Generator_UserColumnName="TicketsID" type="xs:int" />

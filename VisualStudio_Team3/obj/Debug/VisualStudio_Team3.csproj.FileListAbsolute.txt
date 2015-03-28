@@ -2,7 +2,6 @@ C:\Users\Brian\Desktop\VisualStudio_Team3\VisualStudio_Team3\bin\Debug\VisualStu
 C:\Github\AITP2015VisualStudio-\VisualStudio_Team3\bin\Debug\VisualStudio_Team3.exe.config
 D:\Documents\GitHub\AITP2015VisualStudio-\VisualStudio_Team3\bin\Debug\VisualStudio_Team3.exe.config
 D:\Documents\GitHub\AITP2015VisualStudio-\VisualStudio_Team3\obj\Debug\VisualStudio_Team3.csprojResolveAssemblyReference.cache
-D:\Documents\GitHub\AITP2015VisualStudio-\VisualStudio_Team3\obj\Debug\VisualStudio_Team3.Login.resources
 D:\Documents\GitHub\AITP2015VisualStudio-\VisualStudio_Team3\obj\Debug\VisualStudio_Team3.main.resources
 D:\Documents\GitHub\AITP2015VisualStudio-\VisualStudio_Team3\obj\Debug\VisualStudio_Team3.Properties.Resources.resources
 D:\Documents\GitHub\AITP2015VisualStudio-\VisualStudio_Team3\obj\Debug\VisualStudio_Team3.Register.resources
@@ -18,3 +17,8 @@ C:\Github\AITP2015VisualStudio-\VisualStudio_Team3\bin\Debug\VisualStudio_Team3.
 C:\Github\AITP2015VisualStudio-\VisualStudio_Team3\bin\Debug\VisualStudio_Team3.pdb
 C:\Github\AITP2015VisualStudio-\VisualStudio_Team3\obj\Debug\VisualStudio_Team3.exe
 C:\Github\AITP2015VisualStudio-\VisualStudio_Team3\obj\Debug\VisualStudio_Team3.pdb
+D:\Documents\GitHub\AITP2015VisualStudio-\VisualStudio_Team3\obj\Debug\VisualStudio_Team3.exe
+D:\Documents\GitHub\AITP2015VisualStudio-\VisualStudio_Team3\obj\Debug\VisualStudio_Team3.pdb
+D:\Documents\GitHub\AITP2015VisualStudio-\VisualStudio_Team3\bin\Debug\NCAAWS.mdb
+D:\Documents\GitHub\AITP2015VisualStudio-\VisualStudio_Team3\bin\Debug\VisualStudio_Team3.exe
+D:\Documents\GitHub\AITP2015VisualStudio-\VisualStudio_Team3\bin\Debug\VisualStudio_Team3.pdb
