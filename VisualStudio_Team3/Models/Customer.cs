@@ -9,7 +9,7 @@ namespace VisualStudio_Team3.Models
 {
     public class Customer
     {
-        public int CustomerID { get; }
+        public int CustomerID { get; private set; }
         public string FirstName { get; set; }
         public string MiddleName { get; set; }
         public string LastName { get; set; }

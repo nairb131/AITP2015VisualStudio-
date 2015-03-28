@@ -9,7 +9,7 @@ namespace VisualStudio_Team3.Models
 {
     public class Ticket
     {
-        public int TicketsID { get; }
+        public int TicketsID { get; private set; }
         [Required]
         [TicketTypeAttribute]
         public string TicketType { get; set; }
@@ -17,7 +17,7 @@ namespace VisualStudio_Team3.Models
         public int BeginSeat { get; set; }
         [Required]
         public int EndSeat { get; set; }
-        public decimal TicketPrice { get; }
+        public decimal TicketPrice { get; private set; }
         [Required]
         public int Quantity { get; set; }
     }

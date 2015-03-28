@@ -9,12 +9,12 @@ using System.ComponentModel.DataAnnotations;
 namespace VisualStudio_Team3.Models
 {
     public class Seat
-    {        
+    {
 
-        public int SeatNo { get; }
-        public string SeatLocation { get; }
+        public int SeatNo { get; private set; }
+        public string SeatLocation { get; private set; }
         [Required]
         public bool Reserved { get; set; }
-        public decimal SeatPrice { get; }
+        public decimal SeatPrice { get; private set; }
     }
 }
