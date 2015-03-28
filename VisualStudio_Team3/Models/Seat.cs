@@ -10,6 +10,7 @@ namespace VisualStudio_Team3.Models
 {
     public class Seat
     {        
+
         public int SeatNo { get; }
         public string SeatLocation { get; }
         [Required]

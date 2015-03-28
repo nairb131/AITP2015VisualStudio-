@@ -33,6 +33,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -58,7 +59,7 @@
     </Compile>
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Seat.cs" />
-    <Compile Include="Models\TIcket.cs" />
+    <Compile Include="Models\Ticket.cs" />
     <Compile Include="NCAAWSDataSet.cs">
       <DependentUpon>NCAAWSDataSet.xsd</DependentUpon>
       <SubType>Component</SubType>
