@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace VisualStudio_Team3.Models
 {
-    public class TIcket
+    public class Ticket
     {
-        public int TicketsID { get; set; }
+        public int TicketsID { get; }
         public string TicketType { get; set; }
         public int BeginSeat { get; set; }
         public int EndSeat { get; set; }
