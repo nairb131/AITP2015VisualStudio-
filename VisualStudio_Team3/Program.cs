@@ -16,7 +16,7 @@ namespace VisualStudio_Team3
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run();
+            Application.Run(new Register());
         }
     }
 }
