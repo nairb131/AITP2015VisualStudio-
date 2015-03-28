@@ -9,17 +9,25 @@ namespace VisualStudio_Team3.Models
 {
     public class Ticket
     {
+        //no base constructor, seat must have a price
+        public Ticket(decimal seatPrice)
+        {
+            Quantity = this.EndSeat - this.BeginSeat;
+            TicketPrice = seatPrice * this.Quantity;            
+        }
+
         public int TicketsID { get; private set; }
         [Required]
         [TicketTypeAttribute]
         public string TicketType { get; set; }
         [Required]
-        public int BeginSeat { get; set; }
-        [Required]
+        public int BeginSeat { get; set; }        
         public int EndSeat { get; set; }
-        public decimal TicketPrice { get; private set; }
+        //in code setter for this
         [Required]
-        public int Quantity { get; set; }
+        public decimal TicketPrice { get; set; } 
+        [Required]
+        public int Quantity { get; private set; }        
     }
 
     //check if value entered is ok
