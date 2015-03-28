@@ -666,6 +666,7 @@ namespace VisualStudio_Team3 {
                 this.columnCity.MaxLength = 20;
                 this.columnState.MaxLength = 2;
                 this.columnZCode.MaxLength = 5;
+                this.columnEMail.AllowDBNull = false;
                 this.columnEMail.MaxLength = 20;
                 this.columnCustomerType.MaxLength = 255;
                 this.columnExtraField1.MaxLength = 255;
@@ -811,9 +812,9 @@ namespace VisualStudio_Team3 {
             
             private global::System.Data.DataColumn columnSeatPrice;
             
-            private global::System.Data.DataColumn columnExtraField1;
+            private global::System.Data.DataColumn columnSeatRows;
             
-            private global::System.Data.DataColumn columnExtraField2;
+            private global::System.Data.DataColumn columnSeatSection;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -882,17 +883,17 @@ namespace VisualStudio_Team3 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn ExtraField1Column {
+            public global::System.Data.DataColumn SeatRowsColumn {
                 get {
-                    return this.columnExtraField1;
+                    return this.columnSeatRows;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn ExtraField2Column {
+            public global::System.Data.DataColumn SeatSectionColumn {
                 get {
-                    return this.columnExtraField2;
+                    return this.columnSeatSection;
                 }
             }
             
@@ -933,18 +934,25 @@ namespace VisualStudio_Team3 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public SeatsRow AddSeatsRow(int SeatNumber, string SeatLocation, bool Reserved, decimal SeatPrice, string ExtraField1, string ExtraField2) {
+            public SeatsRow AddSeatsRow(int SeatNumber, string SeatLocation, bool Reserved, decimal SeatPrice, string SeatRows, string SeatSection) {
                 SeatsRow rowSeatsRow = ((SeatsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         SeatNumber,
                         SeatLocation,
                         Reserved,
                         SeatPrice,
-                        ExtraField1,
-                        ExtraField2};
+                        SeatRows,
+                        SeatSection};
                 rowSeatsRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowSeatsRow);
                 return rowSeatsRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public SeatsRow FindBySeatRows(string SeatRows) {
+                return ((SeatsRow)(this.Rows.Find(new object[] {
+                            SeatRows})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -968,8 +976,8 @@ namespace VisualStudio_Team3 {
                 this.columnSeatLocation = base.Columns["SeatLocation"];
                 this.columnReserved = base.Columns["Reserved"];
                 this.columnSeatPrice = base.Columns["SeatPrice"];
-                this.columnExtraField1 = base.Columns["ExtraField1"];
-                this.columnExtraField2 = base.Columns["ExtraField2"];
+                this.columnSeatRows = base.Columns["SeatRows"];
+                this.columnSeatSection = base.Columns["SeatSection"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -983,13 +991,20 @@ namespace VisualStudio_Team3 {
                 base.Columns.Add(this.columnReserved);
                 this.columnSeatPrice = new global::System.Data.DataColumn("SeatPrice", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnSeatPrice);
-                this.columnExtraField1 = new global::System.Data.DataColumn("ExtraField1", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnExtraField1);
-                this.columnExtraField2 = new global::System.Data.DataColumn("ExtraField2", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnExtraField2);
+                this.columnSeatRows = new global::System.Data.DataColumn("SeatRows", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSeatRows);
+                this.columnSeatSection = new global::System.Data.DataColumn("SeatSection", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSeatSection);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint2", new global::System.Data.DataColumn[] {
+                                this.columnSeatSection}, false));
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint3", new global::System.Data.DataColumn[] {
+                                this.columnSeatRows}, true));
                 this.columnSeatLocation.MaxLength = 20;
-                this.columnExtraField1.MaxLength = 255;
-                this.columnExtraField2.MaxLength = 255;
+                this.columnSeatRows.AllowDBNull = false;
+                this.columnSeatRows.Unique = true;
+                this.columnSeatRows.MaxLength = 255;
+                this.columnSeatSection.Unique = true;
+                this.columnSeatSection.MaxLength = 255;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1133,7 +1148,7 @@ namespace VisualStudio_Team3 {
             
             private global::System.Data.DataColumn columnTicketPrice;
             
-            private global::System.Data.DataColumn columnExtraField1;
+            private global::System.Data.DataColumn columnQuantity;
             
             private global::System.Data.DataColumn columnExtraField2;
             
@@ -1212,9 +1227,9 @@ namespace VisualStudio_Team3 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn ExtraField1Column {
+            public global::System.Data.DataColumn QuantityColumn {
                 get {
-                    return this.columnExtraField1;
+                    return this.columnQuantity;
                 }
             }
             
@@ -1263,7 +1278,7 @@ namespace VisualStudio_Team3 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TicketsRow AddTicketsRow(string TicketType, int BeginSeat, int EndSeat, decimal TicketPrice, string ExtraField1, string ExtraField2) {
+            public TicketsRow AddTicketsRow(string TicketType, int BeginSeat, int EndSeat, decimal TicketPrice, int Quantity, string ExtraField2) {
                 TicketsRow rowTicketsRow = ((TicketsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -1271,7 +1286,7 @@ namespace VisualStudio_Team3 {
                         BeginSeat,
                         EndSeat,
                         TicketPrice,
-                        ExtraField1,
+                        Quantity,
                         ExtraField2};
                 rowTicketsRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowTicketsRow);
@@ -1307,7 +1322,7 @@ namespace VisualStudio_Team3 {
                 this.columnBeginSeat = base.Columns["BeginSeat"];
                 this.columnEndSeat = base.Columns["EndSeat"];
                 this.columnTicketPrice = base.Columns["TicketPrice"];
-                this.columnExtraField1 = base.Columns["ExtraField1"];
+                this.columnQuantity = base.Columns["Quantity"];
                 this.columnExtraField2 = base.Columns["ExtraField2"];
             }
             
@@ -1324,8 +1339,8 @@ namespace VisualStudio_Team3 {
                 base.Columns.Add(this.columnEndSeat);
                 this.columnTicketPrice = new global::System.Data.DataColumn("TicketPrice", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTicketPrice);
-                this.columnExtraField1 = new global::System.Data.DataColumn("ExtraField1", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnExtraField1);
+                this.columnQuantity = new global::System.Data.DataColumn("Quantity", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnQuantity);
                 this.columnExtraField2 = new global::System.Data.DataColumn("ExtraField2", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnExtraField2);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
@@ -1336,7 +1351,7 @@ namespace VisualStudio_Team3 {
                 this.columnTicketsID.AllowDBNull = false;
                 this.columnTicketsID.Unique = true;
                 this.columnTicketType.MaxLength = 255;
-                this.columnExtraField1.MaxLength = 255;
+                this.columnQuantity.AllowDBNull = false;
                 this.columnExtraField2.MaxLength = 255;
             }
             
@@ -1605,12 +1620,7 @@ namespace VisualStudio_Team3 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string EMail {
                 get {
-                    try {
-                        return ((string)(this[this.tableCustomer.EMailColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'EMail\' in table \'Customer\' is DBNull.", e);
-                    }
+                    return ((string)(this[this.tableCustomer.EMailColumn]));
                 }
                 set {
                     this[this.tableCustomer.EMailColumn] = value;
@@ -1783,18 +1793,6 @@ namespace VisualStudio_Team3 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsEMailNull() {
-                return this.IsNull(this.tableCustomer.EMailColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetEMailNull() {
-                this[this.tableCustomer.EMailColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsCustomerTypeNull() {
                 return this.IsNull(this.tableCustomer.CustomerTypeColumn);
             }
@@ -1934,33 +1932,28 @@ namespace VisualStudio_Team3 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string ExtraField1 {
+            public string SeatRows {
                 get {
-                    try {
-                        return ((string)(this[this.tableSeats.ExtraField1Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'ExtraField1\' in table \'Seats\' is DBNull.", e);
-                    }
+                    return ((string)(this[this.tableSeats.SeatRowsColumn]));
                 }
                 set {
-                    this[this.tableSeats.ExtraField1Column] = value;
+                    this[this.tableSeats.SeatRowsColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string ExtraField2 {
+            public string SeatSection {
                 get {
                     try {
-                        return ((string)(this[this.tableSeats.ExtraField2Column]));
+                        return ((string)(this[this.tableSeats.SeatSectionColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'ExtraField2\' in table \'Seats\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'SeatSection\' in table \'Seats\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableSeats.ExtraField2Column] = value;
+                    this[this.tableSeats.SeatSectionColumn] = value;
                 }
             }
             
@@ -2014,26 +2007,14 @@ namespace VisualStudio_Team3 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsExtraField1Null() {
-                return this.IsNull(this.tableSeats.ExtraField1Column);
+            public bool IsSeatSectionNull() {
+                return this.IsNull(this.tableSeats.SeatSectionColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetExtraField1Null() {
-                this[this.tableSeats.ExtraField1Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsExtraField2Null() {
-                return this.IsNull(this.tableSeats.ExtraField2Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetExtraField2Null() {
-                this[this.tableSeats.ExtraField2Column] = global::System.Convert.DBNull;
+            public void SetSeatSectionNull() {
+                this[this.tableSeats.SeatSectionColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -2128,17 +2109,12 @@ namespace VisualStudio_Team3 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string ExtraField1 {
+            public int Quantity {
                 get {
-                    try {
-                        return ((string)(this[this.tableTickets.ExtraField1Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'ExtraField1\' in table \'Tickets\' is DBNull.", e);
-                    }
+                    return ((int)(this[this.tableTickets.QuantityColumn]));
                 }
                 set {
-                    this[this.tableTickets.ExtraField1Column] = value;
+                    this[this.tableTickets.QuantityColumn] = value;
                 }
             }
             
@@ -2204,18 +2180,6 @@ namespace VisualStudio_Team3 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetTicketPriceNull() {
                 this[this.tableTickets.TicketPriceColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsExtraField1Null() {
-                return this.IsNull(this.tableTickets.ExtraField1Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetExtraField1Null() {
-                this[this.tableTickets.ExtraField1Column] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2697,8 +2661,7 @@ namespace VisualStudio_Team3.NCAAWSDataSetTableAdapters {
                 this.Adapter.DeleteCommand.Parameters[14].Value = ((string)(Original_ZCode));
             }
             if ((Original_EMail == null)) {
-                this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[16].Value = global::System.DBNull.Value;
+                throw new global::System.ArgumentNullException("Original_EMail");
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(0));
@@ -2801,7 +2764,7 @@ namespace VisualStudio_Team3.NCAAWSDataSetTableAdapters {
                 this.Adapter.InsertCommand.Parameters[6].Value = ((string)(ZCode));
             }
             if ((EMail == null)) {
-                this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
+                throw new global::System.ArgumentNullException("EMail");
             }
             else {
                 this.Adapter.InsertCommand.Parameters[7].Value = ((string)(EMail));
@@ -2922,7 +2885,7 @@ namespace VisualStudio_Team3.NCAAWSDataSetTableAdapters {
                 this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(ZCode));
             }
             if ((EMail == null)) {
-                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
+                throw new global::System.ArgumentNullException("EMail");
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(EMail));
@@ -3003,8 +2966,7 @@ namespace VisualStudio_Team3.NCAAWSDataSetTableAdapters {
                 this.Adapter.UpdateCommand.Parameters[27].Value = ((string)(Original_ZCode));
             }
             if ((Original_EMail == null)) {
-                this.Adapter.UpdateCommand.Parameters[28].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[29].Value = global::System.DBNull.Value;
+                throw new global::System.ArgumentNullException("Original_EMail");
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[28].Value = ((object)(0));
@@ -3185,8 +3147,8 @@ namespace VisualStudio_Team3.NCAAWSDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("SeatLocation", "SeatLocation");
             tableMapping.ColumnMappings.Add("Reserved", "Reserved");
             tableMapping.ColumnMappings.Add("SeatPrice", "SeatPrice");
-            tableMapping.ColumnMappings.Add("ExtraField1", "ExtraField1");
-            tableMapping.ColumnMappings.Add("ExtraField2", "ExtraField2");
+            tableMapping.ColumnMappings.Add("ExtraField1", "SeatRows");
+            tableMapping.ColumnMappings.Add("ExtraField2", "SeatSection");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.InsertCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
@@ -3276,8 +3238,13 @@ namespace VisualStudio_Team3.NCAAWSDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int SeatNumber, string SeatLocation, bool Reserved, decimal SeatPrice, string ExtraField1, string ExtraField2) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(SeatNumber));
+        public virtual int Insert(global::System.Nullable<int> SeatNumber, string SeatLocation, bool Reserved, decimal SeatPrice, string ExtraField1, string ExtraField2) {
+            if ((SeatNumber.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[0].Value = ((int)(SeatNumber.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
             if ((SeatLocation == null)) {
                 throw new global::System.ArgumentNullException("SeatLocation");
             }
@@ -3441,7 +3408,7 @@ namespace VisualStudio_Team3.NCAAWSDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("BeginSeat", "BeginSeat");
             tableMapping.ColumnMappings.Add("EndSeat", "EndSeat");
             tableMapping.ColumnMappings.Add("TicketPrice", "TicketPrice");
-            tableMapping.ColumnMappings.Add("ExtraField1", "ExtraField1");
+            tableMapping.ColumnMappings.Add("ExtraField1", "Quantity");
             tableMapping.ColumnMappings.Add("ExtraField2", "ExtraField2");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.OleDb.OleDbCommand();
