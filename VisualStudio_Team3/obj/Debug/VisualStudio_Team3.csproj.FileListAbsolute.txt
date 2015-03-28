@@ -7,7 +7,6 @@ D:\Documents\GitHub\AITP2015VisualStudio-\VisualStudio_Team3\obj\Debug\VisualStu
 D:\Documents\GitHub\AITP2015VisualStudio-\VisualStudio_Team3\obj\Debug\VisualStudio_Team3.Properties.Resources.resources
 D:\Documents\GitHub\AITP2015VisualStudio-\VisualStudio_Team3\obj\Debug\VisualStudio_Team3.Register.resources
 D:\Documents\GitHub\AITP2015VisualStudio-\VisualStudio_Team3\obj\Debug\VisualStudio_Team3.csproj.GenerateResource.Cache
-C:\Github\AITP2015VisualStudio-\VisualStudio_Team3\obj\Debug\VisualStudio_Team3.csprojResolveAssemblyReference.cache
 C:\Github\AITP2015VisualStudio-\VisualStudio_Team3\obj\Debug\VisualStudio_Team3.main.resources
 C:\Github\AITP2015VisualStudio-\VisualStudio_Team3\obj\Debug\VisualStudio_Team3.Properties.Resources.resources
 C:\Github\AITP2015VisualStudio-\VisualStudio_Team3\obj\Debug\VisualStudio_Team3.Register.resources

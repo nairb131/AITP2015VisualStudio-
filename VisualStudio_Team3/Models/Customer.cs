@@ -39,7 +39,6 @@ namespace VisualStudio_Team3.Models
         [CustomerTypeAttribute]
         [Required]
         public string CustomerType { get; set; }
-        [Required]
         public int PurchaserID { get; set; }
         public int TicketsID { get; set; }
     }

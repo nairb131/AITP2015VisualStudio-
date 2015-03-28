@@ -14,6 +14,8 @@ namespace VisualStudio_Team3
 {
     public partial class Register : Form
     {
+        //SqlConnection conn = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["myconnectionstring"].ConnectionString);
+
         public Register()
         {
             InitializeComponent();
@@ -22,6 +24,7 @@ namespace VisualStudio_Team3
         private void btn_register_Click(object sender, EventArgs e)
         {
             ValidateNotEmpty();
+            //need to insert customer to DB and then pull that customer using largest id from database
             Customer cust = new Customer{
                 Address = txt_address.Text,
                 LastName = txt_last.Text,
@@ -32,9 +35,10 @@ namespace VisualStudio_Team3
                 ZCode = txt_zip.Text,
                 Email = txt_email.Text,
                 CustomerType = "Purchaser"                                
-            };
+            };         
+            //can't connect to db...whoops?
 
-
+            //need to launch other form.
         }
 
         private void ValidateNotEmpty()
